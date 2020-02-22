@@ -9,7 +9,7 @@ node {
     script: 'echo $(git rev-parse HEAD)',
     returnStdout: true
      ).trim()
-    echo $GIT_COMMIT_ID
+    sh echo $GIT_COMMIT_ID
     // sh label: '', script: ' docker build -t  testbuild:dev_${GIT_COMMIT_ID} .'
 
 //  stage('Push Docker Image With Commit ID To ECR')
